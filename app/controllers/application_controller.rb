@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   end
   
   # TODO: Add application wide helpers here
+  helpers UserHelpers
   helpers Sinatra::ContentFor
   
   set(:environment, Application::ENVIRONMENT.to_sym)
