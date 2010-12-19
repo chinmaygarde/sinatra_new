@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     also_reload File.join(Application::ROOT, "app/models/*.rb")
   end
   
-  helpers UserHelpers
+  # TODO: Add application wide helpers here
   helpers Sinatra::ContentFor
   
   set(:environment, Application::ENVIRONMENT.to_sym)
@@ -15,9 +15,7 @@ class ApplicationController < Sinatra::Base
   enable :sessions
   
   use OmniAuth::Builder do
-    provider :twitter,  Application::AUTH_TOKENS["twitter"]["consumer_key"], Application::AUTH_TOKENS["twitter"]["consumer_secret"]
-    provider :facebook, Application::AUTH_TOKENS["facebook"]["app_id"], Application::AUTH_TOKENS["facebook"]["app_secret"]
-    provider :github,   Application::AUTH_TOKENS["github"]["client_id"], Application::AUTH_TOKENS["github"]["secret"]
+    # provider :github,   Application::AUTH_TOKENS["github"]["client_id"], Application::AUTH_TOKENS["github"]["secret"]
   end
   
   get '/login' do

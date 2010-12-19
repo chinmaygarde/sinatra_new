@@ -15,8 +15,6 @@ Bundler.setup
 Bundler.require
 Bundler.require(:development) if Application::ENVIRONMENT == "development"
 
-require 'resque/server'
-
 # Load lib directory
 Dir[File.join(File.dirname(__FILE__), "lib", "**/*.rb")].each do |file|
   require File.expand_path(file)
