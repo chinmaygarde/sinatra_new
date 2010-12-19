@@ -21,3 +21,4 @@ TODOS
 * Add authentication providers (See the authentications.yml.example)
 * Setup database (See database.yml and application.rb)
 * Setup the authentications and user model using the ORM of your choice
+* Modify the finders in the ApplicationController according to the ORM in use
