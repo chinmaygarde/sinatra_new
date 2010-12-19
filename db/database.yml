@@ -1,0 +1,9 @@
+development:
+    database: something
+    host: something
+test:
+    database: something
+    host: something
+production:
+    database: something
+    host: something
